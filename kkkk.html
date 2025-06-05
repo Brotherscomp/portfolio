@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>klm</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <style>
+    :root {
+      --primary-color: #1e9ee9;
+      --dark-color: #2c3e50;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      min-height: 100vh;
+      margin: 0;
+      overflow-x: hidden;
+    }
+    
+    /* Left Side Panel */
+    .left-panel {
+      width: 31%;
+      background: linear-gradient(200deg, var(--primary-color), #ddbea5);
+      color: white;
+      position: fixed;
+      height: 100vh;
+      padding: 20px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    /* Right Side Content */
+    .right-panel {
+      width: 69%;
+      margin-left: 31%;
+      padding: 12px;
+    }
+    
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border: 4px solid white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: block;
+      margin: 0 auto;
+    }
+    
+    .skill-badge {
+      background-color: #f8f9fa;
+      border: 1px solid #dee2e6;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s ease;
+    }
+    
+    footer {
+      background-color: var(--dark-color);
+    }
+    
+    /* Navigation List Styles */
+   .nav-list {
+  position: relative; /* Add this line */
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 1.5rem 0;
+  margin: 0;
+  width: 100%;
+}
+
+.navbar-toggler {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.navbar-collapse {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row; /* Display horizontally */
+  align-items: center;
+  padding: 0;
+  margin-left: auto; /* Push menu items to the right */
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+} 
+    .nav-item {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-item:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 1200px) {
+      body {
+        flex-direction: column;
+      }
+      
+      .left-panel {
+        width: 100%;
+        position: relative;
+        height: auto;
+      }
+      
+      .right-panel {
+        width: 100%;
+        margin-left: 0;
+      }
+      
+      .nav-list {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Part 1: Left Panel -->
+  <div class="left-panel">
+    <!-- Navigation List -->
+<nav class="nav-list">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="bi bi-list" style="font-size: 2rem; color: white;"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#skills">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#projects">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero py-5">
+      <div class="container py-4">
+        <img src="brothers.png" alt="Fikadey Kassa" class="profile-img rounded-circle">
+        <h1 class="display-6 fw-bold mb-3">Brotherscomputer</h1>
+        <p class="lead mb-4">Web Developer | Designer | Tech world</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Part 2: Right Panel (All other content) -->
+  <div class="right-panel">
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">About Me</h2>
+        <div class="row align-items-center">
+          <div class="col-lg-14">
+            <h3>Who Am I........?</h3>
+            <p class="lead">Hello! I'm Yazezew-kassa, a dedicated web developer with Specialization in front-end technologies.</p>
+            <p>I specialize in creating responsive, user-friendly websites using modern web technologies such as HTML5, CSS3, JavaScript, and frameworks like React. With a keen eye for design and a strong focus on performance, accessibility, and scalability, I craft digital experiences that are both beautiful and highly functional</p>
+            <p>I’m passionate about writing clean, maintainable code and staying up-to-date with the latest industry trends. Whether collaborating with a team or working independently, I strive to deliver solutions that not only meet user needs but exceed business goals.
+</p>
+<p>
+  When I’m not coding, you’ll likely find me exploring emerging tech, contributing to open-source projects, mentoring junior developers, or recharging outdoors.
+
+
+</p>
+            
+          </div>
+          
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">My Skills</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <i class="bi bi-code-slash display-4 text-primary mb-3"></i>
+                <h3>Frontend</h3>
+                <div class="d-flex justify-content-center gap-1 mt-3">
+                  <span class="badge bg-primary">HTML5</span>
+                  <span class="px-2 py-1 badge bg-warning text-dark">CSS3</span>
+                  <span class="badge bg-info text-dark px-2 py-1">JavaScript</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <i class="bi bi-server display-4 text-primary mb-3"></i>
+                <h3>Backend</h3>
+                <div class="d-flex justify-content-center gap-2 mt-3">
+                  <span class="badge bg-success px-2 py-1">Node.js</span>
+                  <span class="badge bg-primary px-2 py-1 text-dark">Express</span>
+                  <span class="badge bg-warning px-2 py-1">MySQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <i class="bi bi-tools display-4 text-primary mb-3"></i>
+                <h3>Tools</h3>
+                <div class="d-flex justify-content-center gap-2 mt-2">
+                  <span class="badge bi-github bg-warning text-dark py-1">Git</span>
+                  <span class="badge btn-outline-primary bg-primary text-dark px-3 py-1">VS Code</span>
+                  <span class="badge bg-info text-dark px-3">Photoshop</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- Projects Section -->
+<section id="projects" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">My Projects</h2>
+    <div class="row g-4">
+      <!-- Project 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card project-card h-100 shadow-sm">
+          <i class="bi bi-cart-fill display-4 text-primary"></i>
+          <div class="card-body">
+            <h5 class="card-title">E-Commerce Website</h5>
+            <p class="card-text">A fully responsive online store with shopping cart functionality.</p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="badge bg-primary">React</span>
+              <span class="badge bg-success">Node.js</span>
+              <span class="badge bg-info">MongoDB</span>
+            </div>
+            <a href="#" class="btn btn-outline-primary"><i class="bi bi-cart-fill me-2"></i>View Project</a>
+          </div>
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card project-card h-100 shadow-sm">
+          <i class="bi bi-person-fill display-4 text-primary"></i>
+          <div class="card-body">
+            <h5 class="card-title">Portfolio Template</h5>
+            <p class="card-text">A customizable portfolio template built with Bootstrap 5.</p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="badge bg-primary">HTML5</span>
+              <span class="badge bg-warning text-dark">CSS3</span>
+              <span class="badge bg-info">Bootstrap</span>
+            </div>
+            <a href="#" class="btn btn-outline-primary"><i class="bi bi-person-fill me-2"></i>View Project</a>
+          </div>
+        </div>
+      </div>
+      <!-- Project 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card project-card h-100 shadow-sm">
+          <i class="bi bi-check-square-fill display-4 text-primary"></i>
+          <div class="card-body">
+            <h5 class="card-title">Task Management App</h5>
+            <p class="card-text">A productivity app for organizing daily tasks with drag-and-drop interface.</p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="badge bg-primary">Vue.js</span>
+              <span class="badge bg-success">Firebase</span>
+            </div>
+            <a href="#" class="btn btn-outline-primary"><i class="bi bi-check-square-fill me-2"></i>View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<h3 class="text-center mb-4">Let's Build Everything Together</h3>
+
+<!-- Contact Section -->
+<section id="contact" class="py-3">
+  <div class="container">
+    <div class="row justify-content-center g-3 align-items-stretch"> <!-- Changed to align-items-stretch -->
+      <!-- Contact Info Card (Left Side) -->
+      <div class="col-lg-5 col-md-6 d-flex"> <!-- Added d-flex -->
+        <div class="card shadow-sm w-100"> <!-- Added w-100 -->
+          <div class="card-body p-3 d-flex flex-column"> <!-- Added flex column -->
+            <h4 class="card-title mb-3"><ins>Contact Me Here</ins></h4>
+            <ul class="list-unstyled mb-0 flex-grow-1"> <!-- Added flex-grow-1 -->
+              <li class="mb-1"><i class="bi bi-envelope-fill me-2"></i>yazezewkassa@gmail.com</li>
+              <li class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i>Gondar, Ethiopia</li>
+              <li class="mb-1"><i class="bi bi-linkedin me-2"></i>linkedin.com/in/yazezew-kassa</li>
+              <li class="mb-1"><i class="bi bi-github me-2"></i>github.com/Brotherscomp</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact Form (Right Side) -->
+      <div class="col-lg-5 col-md-6 d-flex"> <!-- Added d-flex -->
+        <form class="w-100 d-flex flex-column"> <!-- Added flex column -->
+          <div class="row g-2 flex-grow-1"> <!-- Added flex-grow-1 -->
+            <div class="col-md-6">
+              <label for="name" class="form-label mb-1">Name</label>
+              <input type="text" class="form-control form-control-sm" id="name" required>
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label mb-1">Email</label>
+              <input type="email" class="form-control form-control-sm" id="email" required>
+            </div>
+            <div class="col-12">
+              <label for="subject" class="form-label mb-1">Subject</label>
+              <input type="text" class="form-control form-control-sm" id="subject" required>
+            </div>
+            <div class="col-12">
+              <label for="message" class="form-label mb-1">Message</label>
+              <textarea class="form-control form-control-sm flex-grow-1" id="message" rows="2" required></textarea> <!-- Added flex-grow-1 -->
+            </div>
+            <div class="col-12 text-center mt-2">
+              <button type="submit" class="btn btn-primary btn-sm px-3">Send Message</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="text-white py-2">
+      <div class="container text-center">
+        <div class="mb-2">
+          <a href="#" class="text-white mx-3"><i class="bi bi-linkedin fs-1"></i></a>
+          <a href="#" class="text-white mx-3"><i class="bi bi-github fs-1"></i></a>
+          <a href="#" class="text-white mx-3"><i class="bi bi-twitter fs-1"></i></a>
+        </div>
+        <p class="mb-0">© 2023 yazezew-kassa. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script 
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+  
+    navLinks.forEach(navLink => {
+      navLink.addEventListener('click', () => {
+        if (navbarCollapse.classList.contains('show')) {
+          new bootstrap.Collapse(navbarCollapse).hide();
+        }
+      });
+    });
+  
+    document.addEventListener('click', function(event) {
+      const target = event.target;
+      if (!navbarCollapse.contains(target) && navbarCollapse.classList.contains('show')) {
+        new bootstrap.Collapse(navbarCollapse).hide();
+      }
+    });
+  });
+</script>
+</body>
+</html>
